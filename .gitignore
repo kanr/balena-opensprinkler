@@ -1,5 +1,6 @@
 
 # Created by https://www.gitignore.io/api/node,windows,osx,linux,node,bower
+.vscode
 
 ### Node ###
 # Logs
