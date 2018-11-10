@@ -1,6 +1,6 @@
 # Balena-OpenSprinkler (raspberry pi)
 
-The open Sprinkler is an open source hardware ecosystem for microcontrollers (arduino esp8266) and single board computers (Raspberry Pi, BeagleBoneBlack)
+The open Sprinkler is an open source hardware ecosystem for micro-controllers (arduino esp8266) and single board computers (Raspberry Pi, BeagleBoneBlack)
 
 This repository builds a docker container for the [Balena.io](balena.io) ecosystem which includes all the boards in the BeagleBone and Raspberry pi product families.
 

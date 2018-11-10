@@ -2,6 +2,10 @@ version: '2'
 services:
   opensprinkler:
     build: ./opensprinkler
+    devices:
+      - "/sys/gpio:/sys/gpio"
+    cap_add:
+      - SYS_RAWIO
     ports:
       - 8080:8080
 
