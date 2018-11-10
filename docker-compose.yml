@@ -4,6 +4,7 @@ services:
     build: ./opensprinkler
     devices:
       - "/sys:/sys"
+      - /dev/gpiomem:/dev/gpiomem
     cap_add:
       - SYS_RAWIO
     ports:
