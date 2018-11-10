@@ -16,9 +16,9 @@ services:
       io.resin.features.kernel-modules: '1'
     ports:
       - target: 80
-      - published: 8080
-      - protocol: tcp
-      - mode: host
+        published: 8080
+        protocol: tcp
+        mode: host
     expose:
       - "8080"
 
