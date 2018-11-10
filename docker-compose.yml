@@ -9,6 +9,11 @@ services:
       - "/dev/mem:/dev/mem"
     cap_add:
       - SYS_RAWIO
+    restart: always
+    network_mode: host
+    privileged: true
+    labels:
+      io.resin.features.kernel-modules: '1'
     ports:
       - 80:8080
 
