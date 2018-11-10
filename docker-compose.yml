@@ -3,7 +3,7 @@ services:
   opensprinkler:
     build: ./opensprinkler
     devices:
-      - "/sys/gpio:/sys/gpio"
+      - "/sys/gpio/:/sys/gpio/"
     cap_add:
       - SYS_RAWIO
     ports:
