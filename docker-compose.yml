@@ -16,6 +16,7 @@ services:
       io.resin.features.kernel-modules: '1'
     ports:
       - 80:8080
+      - 8080:80
 
 volumes:
   opensprinkler:
