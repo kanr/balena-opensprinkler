@@ -15,12 +15,10 @@ services:
     labels:
       io.resin.features.kernel-modules: '1'
     ports:
-      - target: 80
-        published: 8080
-        protocol: tcp
-        mode: host
+      - "80:8080"
     expose:
       - "8080"
+      - "80"
 
 
 volumes:
