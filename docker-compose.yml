@@ -20,7 +20,7 @@ services:
       - "8080"
       - "80"
   nodered:
-    build: ./balena-node-red
+    build: ./balena-node-red/Dockerfile.template
     volumes:
       - "nodered:/var/lib/node-red"
     expose:
