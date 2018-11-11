@@ -1,0 +1,124 @@
+[
+    {
+        "id": "371fd6cd.ccb1fa",
+        "type": "tab",
+        "label": "Light",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7870aceb.a202f4",
+        "type": "serial in",
+        "z": "371fd6cd.ccb1fa",
+        "name": "",
+        "serial": "ab13bb77.85ef88",
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "6b459caf.7a3d04",
+                "21b0993d.178076"
+            ]
+        ]
+    },
+    {
+        "id": "6b459caf.7a3d04",
+        "type": "debug",
+        "z": "371fd6cd.ccb1fa",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 650,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "21b0993d.178076",
+        "type": "ui_chart",
+        "z": "371fd6cd.ccb1fa",
+        "name": "",
+        "group": "b79bae03.da20a",
+        "order": 0,
+        "width": "10",
+        "height": "6",
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 567.5,
+        "y": 331,
+        "wires": [
+            [
+                "c255873b.33b048"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c255873b.33b048",
+        "type": "debug",
+        "z": "371fd6cd.ccb1fa",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 818.5,
+        "y": 266,
+        "wires": []
+    },
+    {
+        "id": "ab13bb77.85ef88",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyACM0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\r",
+        "bin": "false",
+        "out": "char",
+        "addchar": true
+    },
+    {
+        "id": "b79bae03.da20a",
+        "type": "ui_group",
+        "z": "",
+        "name": "Sensors",
+        "tab": "f6a68dbf.f488d",
+        "order": 1,
+        "disp": true,
+        "width": "10"
+    },
+    {
+        "id": "f6a68dbf.f488d",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Sensors",
+        "icon": "dashboard",
+        "order": 1
+    }
+]

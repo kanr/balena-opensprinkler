@@ -1,0 +1,835 @@
+[
+    {
+        "id": "eda6bb4f.1138f8",
+        "type": "tab",
+        "label": "System Monitor",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d0c87cc2.cbcbb",
+        "type": "inject",
+        "z": "eda6bb4f.1138f8",
+        "name": "Read memory every 1 minute",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "x": 183.5,
+        "y": 73,
+        "wires": [
+            [
+                "3cc289fa.46b276"
+            ]
+        ]
+    },
+    {
+        "id": "3cc289fa.46b276",
+        "type": "Memory",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "x": 408.5,
+        "y": 72,
+        "wires": [
+            [
+                "2498c9c6.2319c6"
+            ]
+        ]
+    },
+    {
+        "id": "c5b9964c.09ef98",
+        "type": "ui_chart",
+        "z": "eda6bb4f.1138f8",
+        "name": "Mem Usage",
+        "group": "d7131ccf.7db95",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Memory Usage",
+        "chartType": "horizontalBar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 863.5,
+        "y": 49,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2498c9c6.2319c6",
+        "type": "change",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.memusage",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 627.5,
+        "y": 72,
+        "wires": [
+            [
+                "b31ea8f4.fe8938",
+                "c5b9964c.09ef98"
+            ]
+        ]
+    },
+    {
+        "id": "b31ea8f4.fe8938",
+        "type": "debug",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 865,
+        "y": 88,
+        "wires": []
+    },
+    {
+        "id": "4a3bed83.85e5b4",
+        "type": "OS",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "x": 400.5,
+        "y": 177,
+        "wires": [
+            [
+                "dae80774.e955f8"
+            ]
+        ]
+    },
+    {
+        "id": "bd3fc038.d0fa",
+        "type": "Drives",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "x": 271.5,
+        "y": 430,
+        "wires": [
+            [
+                "6372bdcf.290634",
+                "3cfae2b3.cc893e",
+                "47452726.677148"
+            ]
+        ]
+    },
+    {
+        "id": "322f2181.21584e",
+        "type": "Uptime",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "x": 372.5,
+        "y": 275,
+        "wires": [
+            [
+                "b2aa133d.5291e"
+            ]
+        ]
+    },
+    {
+        "id": "c18fbe9b.9e8be",
+        "type": "CPUs",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "x": 270.5,
+        "y": 519,
+        "wires": [
+            [
+                "3616587f.ad4aa8"
+            ]
+        ]
+    },
+    {
+        "id": "13b1b905.a90b87",
+        "type": "Loadavg",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "x": 391.5,
+        "y": 793,
+        "wires": [
+            [
+                "b52d7613.b5f798",
+                "7a2f2db9.74d264",
+                "59da5ee7.8c5ab"
+            ]
+        ]
+    },
+    {
+        "id": "d7ccd92e.261488",
+        "type": "NetworkIntf",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "x": 369.5,
+        "y": 631,
+        "wires": [
+            [
+                "448adb80.2b1b14"
+            ]
+        ]
+    },
+    {
+        "id": "3dc2d32f.ef52ac",
+        "type": "debug",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 828.5,
+        "y": 197,
+        "wires": []
+    },
+    {
+        "id": "efd2b8f9.cd4088",
+        "type": "inject",
+        "z": "eda6bb4f.1138f8",
+        "name": "Read at Start",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 125,
+        "y": 178,
+        "wires": [
+            [
+                "4a3bed83.85e5b4"
+            ]
+        ]
+    },
+    {
+        "id": "e628d192.b99f9",
+        "type": "inject",
+        "z": "eda6bb4f.1138f8",
+        "name": "Read at start",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 117,
+        "y": 430,
+        "wires": [
+            [
+                "bd3fc038.d0fa"
+            ]
+        ]
+    },
+    {
+        "id": "5be97f47.14e88",
+        "type": "debug",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 710,
+        "y": 302,
+        "wires": []
+    },
+    {
+        "id": "3616587f.ad4aa8",
+        "type": "debug",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 416,
+        "y": 519,
+        "wires": []
+    },
+    {
+        "id": "480b652.d68889c",
+        "type": "debug",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 797,
+        "y": 867,
+        "wires": []
+    },
+    {
+        "id": "ee885fbb.24b48",
+        "type": "debug",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 728,
+        "y": 673,
+        "wires": []
+    },
+    {
+        "id": "94cf88cd.c64298",
+        "type": "inject",
+        "z": "eda6bb4f.1138f8",
+        "name": "Read every 1 hour",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "x": 130,
+        "y": 275,
+        "wires": [
+            [
+                "322f2181.21584e"
+            ]
+        ]
+    },
+    {
+        "id": "e4bf2a96.df04a8",
+        "type": "inject",
+        "z": "eda6bb4f.1138f8",
+        "name": "Read at start",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 121,
+        "y": 519,
+        "wires": [
+            [
+                "c18fbe9b.9e8be"
+            ]
+        ]
+    },
+    {
+        "id": "66bb836f.129b1c",
+        "type": "inject",
+        "z": "eda6bb4f.1138f8",
+        "name": "Read every 15 minutes",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "x": 167,
+        "y": 795,
+        "wires": [
+            [
+                "13b1b905.a90b87"
+            ]
+        ]
+    },
+    {
+        "id": "67f8a1bf.1d9f6",
+        "type": "inject",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 109.5,
+        "y": 632,
+        "wires": [
+            [
+                "d7ccd92e.261488"
+            ]
+        ]
+    },
+    {
+        "id": "448adb80.2b1b14",
+        "type": "change",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.networkInterfaces.eno1[0].address",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 564,
+        "y": 631,
+        "wires": [
+            [
+                "ee885fbb.24b48",
+                "f4458ceb.06182"
+            ]
+        ]
+    },
+    {
+        "id": "f4458ceb.06182",
+        "type": "ui_text",
+        "z": "eda6bb4f.1138f8",
+        "group": "d7131ccf.7db95",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "IP Address",
+        "label": "Local IP address",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 764.5,
+        "y": 626,
+        "wires": []
+    },
+    {
+        "id": "5e96a4e2.d7bd6c",
+        "type": "ui_gauge",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "group": "e822d6d6.2dc178",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "5 Minute",
+        "label": "units",
+        "format": "{{value | number:1}}%",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 784.5,
+        "y": 784,
+        "wires": []
+    },
+    {
+        "id": "4dbe92bd.bda5cc",
+        "type": "ui_gauge",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "group": "e822d6d6.2dc178",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "15 Minute",
+        "label": "units",
+        "format": "{{value | number:1}}%",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 785,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "5835eaa.ecb0e14",
+        "type": "ui_gauge",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "group": "e822d6d6.2dc178",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "1 Minute",
+        "label": "units",
+        "format": "{{value | number:1}}%",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 787,
+        "y": 748,
+        "wires": []
+    },
+    {
+        "id": "b52d7613.b5f798",
+        "type": "change",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.loadavg[0]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 581,
+        "y": 772,
+        "wires": [
+            [
+                "480b652.d68889c",
+                "5835eaa.ecb0e14"
+            ]
+        ]
+    },
+    {
+        "id": "7a2f2db9.74d264",
+        "type": "change",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.loadavg[1]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 581,
+        "y": 808,
+        "wires": [
+            [
+                "5e96a4e2.d7bd6c",
+                "480b652.d68889c"
+            ]
+        ]
+    },
+    {
+        "id": "59da5ee7.8c5ab",
+        "type": "change",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.loadavg[2]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 579,
+        "y": 844,
+        "wires": [
+            [
+                "4dbe92bd.bda5cc",
+                "480b652.d68889c"
+            ]
+        ]
+    },
+    {
+        "id": "f89db02e.e5f93",
+        "type": "ui_text",
+        "z": "eda6bb4f.1138f8",
+        "group": "d7131ccf.7db95",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Hostname",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 829,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "dae80774.e955f8",
+        "type": "change",
+        "z": "eda6bb4f.1138f8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.hostname",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 565,
+        "y": 177,
+        "wires": [
+            [
+                "3dc2d32f.ef52ac",
+                "f89db02e.e5f93"
+            ]
+        ]
+    },
+    {
+        "id": "ae3c25e8.d6ea78",
+        "type": "ui_text",
+        "z": "eda6bb4f.1138f8",
+        "group": "d7131ccf.7db95",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Uptime",
+        "label": "Uptime (hours)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 702,
+        "y": 262,
+        "wires": []
+    },
+    {
+        "id": "b2aa133d.5291e",
+        "type": "function",
+        "z": "eda6bb4f.1138f8",
+        "name": "Uptime ",
+        "func": "var hours = Math.floor(msg.payload.uptime / (60 * 60));\n\nvar newMsg = { payload: hours };\n\nreturn newMsg;",
+        "outputs": "1",
+        "noerr": 0,
+        "x": 540.5,
+        "y": 276,
+        "wires": [
+            [
+                "ae3c25e8.d6ea78",
+                "5be97f47.14e88"
+            ]
+        ]
+    },
+    {
+        "id": "fef93ff7.94a6c",
+        "type": "ui_gauge",
+        "z": "eda6bb4f.1138f8",
+        "name": "/lib/module",
+        "group": "5db99964.4e2608",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "{{msg.topic}}",
+        "label": "",
+        "format": "{{value | number:1}}%",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 643,
+        "y": 382,
+        "wires": []
+    },
+    {
+        "id": "6372bdcf.290634",
+        "type": "function",
+        "z": "eda6bb4f.1138f8",
+        "name": "Drive monitor",
+        "func": "var payMsg = { payload: msg.payload[3].capacity };\nvar newMsg = { topic: msg.payload[3].mount };\n\nreturn [payMsg, newMsg];",
+        "outputs": "2",
+        "noerr": 0,
+        "x": 453,
+        "y": 384,
+        "wires": [
+            [
+                "fef93ff7.94a6c"
+            ],
+            [
+                "fef93ff7.94a6c"
+            ]
+        ]
+    },
+    {
+        "id": "3cfae2b3.cc893e",
+        "type": "function",
+        "z": "eda6bb4f.1138f8",
+        "name": "Drive monitor",
+        "func": "var payMsg = { payload: msg.payload[4].capacity };\nvar newMsg = { topic: msg.payload[4].mount };\n\nreturn [payMsg, newMsg];",
+        "outputs": "2",
+        "noerr": 0,
+        "x": 451,
+        "y": 421,
+        "wires": [
+            [
+                "e19073e9.bb13e"
+            ],
+            [
+                "e19073e9.bb13e"
+            ]
+        ]
+    },
+    {
+        "id": "e19073e9.bb13e",
+        "type": "ui_gauge",
+        "z": "eda6bb4f.1138f8",
+        "name": "/dev/shm",
+        "group": "5db99964.4e2608",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "{{msg.topic}}",
+        "label": "",
+        "format": "{{value | number:1}}%",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 633,
+        "y": 421,
+        "wires": []
+    },
+    {
+        "id": "47452726.677148",
+        "type": "function",
+        "z": "eda6bb4f.1138f8",
+        "name": "Drive monitor",
+        "func": "var payMsg = { payload: msg.payload[1].capacity };\nvar newMsg = { topic: msg.payload[1].mount };\n\nreturn [payMsg, newMsg];",
+        "outputs": "2",
+        "noerr": 0,
+        "x": 452,
+        "y": 461,
+        "wires": [
+            [
+                "f87fdca5.6439"
+            ],
+            [
+                "f87fdca5.6439"
+            ]
+        ]
+    },
+    {
+        "id": "f87fdca5.6439",
+        "type": "ui_gauge",
+        "z": "eda6bb4f.1138f8",
+        "name": "/dev/sda6",
+        "group": "5db99964.4e2608",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "{{msg.topic}}",
+        "label": "",
+        "format": "{{value | number:1}}%",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 633,
+        "y": 459,
+        "wires": []
+    },
+    {
+        "id": "d7131ccf.7db95",
+        "type": "ui_group",
+        "z": "",
+        "name": "Memory",
+        "tab": "8f37a3d0.27c28",
+        "order": 1,
+        "disp": true,
+        "width": "10"
+    },
+    {
+        "id": "e822d6d6.2dc178",
+        "type": "ui_group",
+        "z": "",
+        "name": "CPU Load Average",
+        "tab": "8f37a3d0.27c28",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "5db99964.4e2608",
+        "type": "ui_group",
+        "z": "",
+        "name": "Storage",
+        "tab": "8f37a3d0.27c28",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "8f37a3d0.27c28",
+        "type": "ui_tab",
+        "z": "",
+        "name": "System Monitor",
+        "icon": "dashboard",
+        "order": 2
+    }
+]

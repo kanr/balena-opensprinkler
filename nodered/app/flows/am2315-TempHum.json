@@ -1,0 +1,145 @@
+[
+    {
+        "id": "d55d5a21.332638",
+        "type": "tab",
+        "label": "Temp/Hum",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a6de1034.05de8",
+        "type": "serial in",
+        "z": "d55d5a21.332638",
+        "name": "",
+        "serial": "ab13bb77.85ef88",
+        "x": 406.5,
+        "y": 180,
+        "wires": [
+            [
+                "3286a30e.264f0c"
+            ]
+        ]
+    },
+    {
+        "id": "fc120fad.a4cd7",
+        "type": "debug",
+        "z": "d55d5a21.332638",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 710,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "3286a30e.264f0c",
+        "type": "switch",
+        "z": "d55d5a21.332638",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "Temp",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "Hum",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 550,
+        "y": 200,
+        "wires": [
+            [
+                "fc120fad.a4cd7",
+                "c33cde08.3107f"
+            ],
+            [
+                "a795dd0e.7f153",
+                "9ada02c9.5fa7"
+            ]
+        ]
+    },
+    {
+        "id": "a795dd0e.7f153",
+        "type": "debug",
+        "z": "d55d5a21.332638",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 710,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c33cde08.3107f",
+        "type": "ui_text",
+        "z": "d55d5a21.332638",
+        "group": "b79bae03.da20a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temp",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 701.5,
+        "y": 97,
+        "wires": []
+    },
+    {
+        "id": "9ada02c9.5fa7",
+        "type": "ui_text",
+        "z": "d55d5a21.332638",
+        "group": "b79bae03.da20a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Hum",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 695.5,
+        "y": 304,
+        "wires": []
+    },
+    {
+        "id": "ab13bb77.85ef88",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyACM0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\r",
+        "bin": "false",
+        "out": "char",
+        "addchar": true
+    },
+    {
+        "id": "b79bae03.da20a",
+        "type": "ui_group",
+        "z": "",
+        "name": "Sensors",
+        "tab": "f6a68dbf.f488d",
+        "order": 1,
+        "disp": true,
+        "width": "10"
+    },
+    {
+        "id": "f6a68dbf.f488d",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Sensors",
+        "icon": "dashboard",
+        "order": 1
+    }
+]

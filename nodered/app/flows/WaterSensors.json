@@ -1,0 +1,1499 @@
+[
+    {
+        "id": "1bff4340.e6075d",
+        "type": "tab",
+        "label": "Turbidity Sensor",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "178ea6e2.92c459",
+        "type": "tab",
+        "label": "Atlas PH",
+        "disabled": false,
+        "info": "Atlas Scientific EZO PH stamp\n[Docs](https://www.atlas-scientific.com/_files/_datasheets/_circuit/pH_EZO_Datasheet.pdf)\n\n"
+    },
+    {
+        "id": "2356a64c.d40d2a",
+        "type": "tab",
+        "label": "Atlas EC",
+        "disabled": false,
+        "info": "Atlas Scientific Electrical Conductivity EZO stamp + sensor\n\n[docs](https://www.atlas-scientific.com/_files/_datasheets/_circuit/EC_EZO_Datasheet.pdf)"
+    },
+    {
+        "id": "eaac0690.e7ab78",
+        "type": "tab",
+        "label": "Atlas Temp",
+        "disabled": false,
+        "info": "Atlas Scientific EZO Temp Stamp and sensor\n\n[Docs](https://www.atlas-scientific.com/_files/_datasheets/_circuit/EZO_RTD_Datasheet.pdf)"
+    },
+    {
+        "id": "47fa784a.e26458",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "Courier,monospace",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#23a056",
+                "baseFont": "Courier,monospace",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#23a157",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#23a056",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#3bd47a",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#23a056",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Courier,monospace"
+                }
+            }
+        },
+        "site": {
+            "name": "Test",
+            "hideToolbar": "true",
+            "allowSwipe": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "8c30a9e1.570fe8",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyACM0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\r",
+        "bin": "false",
+        "out": "char",
+        "addchar": true,
+        "responsetimeout": ""
+    },
+    {
+        "id": "60020bcc.065ad4",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Sensor Graphs",
+        "icon": "dashboard",
+        "order": 2
+    },
+    {
+        "id": "71309f3c.4b0d2",
+        "type": "ui_group",
+        "z": "",
+        "name": "Sensors",
+        "tab": "60020bcc.065ad4",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "b4fe7e19.c9f96",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyUSB1",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\r",
+        "bin": "false",
+        "out": "char",
+        "addchar": true
+    },
+    {
+        "id": "bf52a1b7.9f111",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyUSB2",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\r",
+        "bin": "false",
+        "out": "char",
+        "addchar": true,
+        "responsetimeout": ""
+    },
+    {
+        "id": "5b95d621.91e058",
+        "type": "ui_group",
+        "z": "",
+        "name": "Conductivity",
+        "tab": "60020bcc.065ad4",
+        "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "64a016bb.ab17b8",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\r",
+        "bin": "false",
+        "out": "char",
+        "addchar": true,
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "46861a85.6916f4",
+        "type": "serial out",
+        "z": "eaac0690.e7ab78",
+        "name": "Temperature Sensor",
+        "serial": "b4fe7e19.c9f96",
+        "x": 540,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "bc77c673.5868b8",
+        "type": "inject",
+        "z": "eaac0690.e7ab78",
+        "name": "Read",
+        "topic": "",
+        "payload": "r",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 90,
+        "y": 177,
+        "wires": [
+            [
+                "46861a85.6916f4"
+            ]
+        ]
+    },
+    {
+        "id": "d976b73d.1e92d8",
+        "type": "debug",
+        "z": "eaac0690.e7ab78",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 852,
+        "y": 259,
+        "wires": []
+    },
+    {
+        "id": "d2ca5571.b4d6c8",
+        "type": "serial in",
+        "z": "eaac0690.e7ab78",
+        "name": "Temperature Sensor Output",
+        "serial": "b4fe7e19.c9f96",
+        "x": 560,
+        "y": 260,
+        "wires": [
+            [
+                "d976b73d.1e92d8",
+                "d6db3f2b.ad8b7"
+            ]
+        ]
+    },
+    {
+        "id": "41702a72.69d014",
+        "type": "inject",
+        "z": "eaac0690.e7ab78",
+        "name": "Information",
+        "topic": "",
+        "payload": "i,<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 110,
+        "y": 282,
+        "wires": [
+            [
+                "46861a85.6916f4"
+            ]
+        ]
+    },
+    {
+        "id": "5da60e1d.cbb74",
+        "type": "inject",
+        "z": "eaac0690.e7ab78",
+        "name": "",
+        "topic": "",
+        "payload": "?,<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 90,
+        "y": 320,
+        "wires": [
+            [
+                "46861a85.6916f4"
+            ]
+        ]
+    },
+    {
+        "id": "53e02f97.947de",
+        "type": "inject",
+        "z": "eaac0690.e7ab78",
+        "name": "Temperature Compensation",
+        "topic": "",
+        "payload": "T,<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "46861a85.6916f4"
+            ]
+        ]
+    },
+    {
+        "id": "ed57cc2c.911a7",
+        "type": "inject",
+        "z": "eaac0690.e7ab78",
+        "name": "Status",
+        "topic": "",
+        "payload": "Status,<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 90,
+        "y": 440,
+        "wires": [
+            [
+                "46861a85.6916f4"
+            ]
+        ]
+    },
+    {
+        "id": "8e8d3e07.8320e",
+        "type": "inject",
+        "z": "eaac0690.e7ab78",
+        "name": "Enable/Disable LED",
+        "topic": "",
+        "payload": "L,<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "46861a85.6916f4"
+            ]
+        ]
+    },
+    {
+        "id": "f8869ad3.686cd8",
+        "type": "inject",
+        "z": "eaac0690.e7ab78",
+        "name": "Calibration",
+        "topic": "",
+        "payload": "Cal,?",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 100,
+        "y": 360,
+        "wires": [
+            [
+                "46861a85.6916f4"
+            ]
+        ]
+    },
+    {
+        "id": "27dd0284.eaa31e",
+        "type": "inject",
+        "z": "eaac0690.e7ab78",
+        "name": "Disable Continuous Read",
+        "topic": "Calibration",
+        "payload": "C,0<cr>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 151,
+        "y": 211,
+        "wires": [
+            [
+                "46861a85.6916f4"
+            ]
+        ]
+    },
+    {
+        "id": "feec7c4.42f4c8",
+        "type": "inject",
+        "z": "eaac0690.e7ab78",
+        "name": "Temp Scale",
+        "topic": "",
+        "payload": "S,?",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 110,
+        "y": 520,
+        "wires": [
+            [
+                "46861a85.6916f4"
+            ]
+        ]
+    },
+    {
+        "id": "6ee8e92f.b2b2c8",
+        "type": "comment",
+        "z": "eaac0690.e7ab78",
+        "name": "EZO Stamp Commands",
+        "info": "All commands are ascii strings or ascii characters",
+        "x": 120,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e496c87f.3a0478",
+        "type": "inject",
+        "z": "eaac0690.e7ab78",
+        "name": "",
+        "topic": "",
+        "payload": "S,<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 90,
+        "y": 140,
+        "wires": [
+            [
+                "46861a85.6916f4"
+            ]
+        ]
+    },
+    {
+        "id": "4e3db40c.4479ac",
+        "type": "inject",
+        "z": "eaac0690.e7ab78",
+        "name": "Enable Continuous Read",
+        "topic": "Calibration",
+        "payload": "C,1<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 150,
+        "y": 246,
+        "wires": [
+            [
+                "46861a85.6916f4"
+            ]
+        ]
+    },
+    {
+        "id": "606a68fc.10de38",
+        "type": "comment",
+        "z": "eaac0690.e7ab78",
+        "name": "Temp Sensor",
+        "info": "",
+        "x": 570,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d6db3f2b.ad8b7",
+        "type": "ui_chart",
+        "z": "eaac0690.e7ab78",
+        "name": "Temperature (C)",
+        "group": "71309f3c.4b0d2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature (C)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 855,
+        "y": 218,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "98fdc731.680ff8",
+        "type": "inject",
+        "z": "eaac0690.e7ab78",
+        "name": "Response codes",
+        "topic": "",
+        "payload": "*OK,0",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 560,
+        "wires": [
+            [
+                "46861a85.6916f4"
+            ]
+        ]
+    },
+    {
+        "id": "ec16ccfc.e0bbc",
+        "type": "serial in",
+        "z": "1bff4340.e6075d",
+        "name": "Turbidity Arduino",
+        "serial": "8c30a9e1.570fe8",
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "6f05285d.2df908",
+                "6ec5acf1.5cad04"
+            ]
+        ]
+    },
+    {
+        "id": "6f05285d.2df908",
+        "type": "debug",
+        "z": "1bff4340.e6075d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 480,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6ec5acf1.5cad04",
+        "type": "ui_chart",
+        "z": "1bff4340.e6075d",
+        "name": "Ph",
+        "group": "71309f3c.4b0d2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Turbidity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "55de08d3.5096b8",
+        "type": "serial in",
+        "z": "178ea6e2.92c459",
+        "name": "Ph Sensor Ouput",
+        "serial": "bf52a1b7.9f111",
+        "x": 520,
+        "y": 200,
+        "wires": [
+            [
+                "d71afe64.f38eb"
+            ]
+        ]
+    },
+    {
+        "id": "bb59cc4e.a3608",
+        "type": "serial out",
+        "z": "178ea6e2.92c459",
+        "name": "Ph Sensor",
+        "serial": "bf52a1b7.9f111",
+        "x": 499,
+        "y": 139,
+        "wires": []
+    },
+    {
+        "id": "7c2515cf.6aa02c",
+        "type": "debug",
+        "z": "178ea6e2.92c459",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 850,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "330176d.cae9e8a",
+        "type": "inject",
+        "z": "178ea6e2.92c459",
+        "name": "Read",
+        "topic": "",
+        "payload": "r,<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "bb59cc4e.a3608"
+            ]
+        ]
+    },
+    {
+        "id": "c6e30581.c8d648",
+        "type": "inject",
+        "z": "178ea6e2.92c459",
+        "name": "Disable Continuous Read",
+        "topic": "Calibration",
+        "payload": "C,0<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "bb59cc4e.a3608"
+            ]
+        ]
+    },
+    {
+        "id": "4ceba80.d2cd458",
+        "type": "inject",
+        "z": "178ea6e2.92c459",
+        "name": "Enable Continuous Read",
+        "topic": "",
+        "payload": "C,1<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "bb59cc4e.a3608"
+            ]
+        ]
+    },
+    {
+        "id": "c3944ef1.25175",
+        "type": "inject",
+        "z": "178ea6e2.92c459",
+        "name": "Disable Continuous Read",
+        "topic": "Calibration",
+        "payload": "C,?<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "bb59cc4e.a3608"
+            ]
+        ]
+    },
+    {
+        "id": "3aff0c11.87b494",
+        "type": "inject",
+        "z": "178ea6e2.92c459",
+        "name": "",
+        "topic": "",
+        "payload": "i,<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "bb59cc4e.a3608"
+            ]
+        ]
+    },
+    {
+        "id": "e40a6ad0.1b9ac8",
+        "type": "comment",
+        "z": "178ea6e2.92c459",
+        "name": "Ph Sensor",
+        "info": "",
+        "x": 500,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2da68ced.250c04",
+        "type": "ui_chart",
+        "z": "178ea6e2.92c459",
+        "name": "Ph",
+        "group": "71309f3c.4b0d2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Ph",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "1",
+        "ymax": "14",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 830,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fa36a0dd.592bc",
+        "type": "inject",
+        "z": "178ea6e2.92c459",
+        "name": "Enable/Disable LED",
+        "topic": "",
+        "payload": "L,<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "bb59cc4e.a3608"
+            ]
+        ]
+    },
+    {
+        "id": "aeebba42.097738",
+        "type": "inject",
+        "z": "178ea6e2.92c459",
+        "name": "Calibration",
+        "topic": "",
+        "payload": "Cal,?",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "bb59cc4e.a3608"
+            ]
+        ]
+    },
+    {
+        "id": "e5a2e94a.edefb8",
+        "type": "inject",
+        "z": "178ea6e2.92c459",
+        "name": "Response codes",
+        "topic": "",
+        "payload": "OK,?",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "bb59cc4e.a3608"
+            ]
+        ]
+    },
+    {
+        "id": "8d3d50a8.6c1ba",
+        "type": "inject",
+        "z": "178ea6e2.92c459",
+        "name": "Status",
+        "topic": "",
+        "payload": "Status,<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "bb59cc4e.a3608"
+            ]
+        ]
+    },
+    {
+        "id": "d71afe64.f38eb",
+        "type": "switch",
+        "z": "178ea6e2.92c459",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "*OK",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 690,
+        "y": 200,
+        "wires": [
+            [
+                "7c2515cf.6aa02c"
+            ],
+            [
+                "2da68ced.250c04"
+            ]
+        ]
+    },
+    {
+        "id": "96cd8fa4.5194f",
+        "type": "serial in",
+        "z": "2356a64c.d40d2a",
+        "name": "ec",
+        "serial": "64a016bb.ab17b8",
+        "x": 510,
+        "y": 180,
+        "wires": [
+            [
+                "69bc9540.6d502c",
+                "d34b1bd5.ec71c8"
+            ]
+        ]
+    },
+    {
+        "id": "fa6172b8.636ec",
+        "type": "serial out",
+        "z": "2356a64c.d40d2a",
+        "name": "ec",
+        "serial": "64a016bb.ab17b8",
+        "x": 499,
+        "y": 119,
+        "wires": []
+    },
+    {
+        "id": "68fbfdd1.5ff4c4",
+        "type": "debug",
+        "z": "2356a64c.d40d2a",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 810,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "79cbb41b.fd7fdc",
+        "type": "inject",
+        "z": "2356a64c.d40d2a",
+        "name": "Read",
+        "topic": "",
+        "payload": "R,<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "fa6172b8.636ec"
+            ]
+        ]
+    },
+    {
+        "id": "90951f0a.e60cc",
+        "type": "inject",
+        "z": "2356a64c.d40d2a",
+        "name": "Disable Continuous Read",
+        "topic": "Calibration",
+        "payload": "C,0<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "fa6172b8.636ec"
+            ]
+        ]
+    },
+    {
+        "id": "cd933e93.28372",
+        "type": "inject",
+        "z": "2356a64c.d40d2a",
+        "name": "Enable Continuous Read",
+        "topic": "",
+        "payload": "C,1<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "fa6172b8.636ec"
+            ]
+        ]
+    },
+    {
+        "id": "a8d17a6e.4d7c78",
+        "type": "inject",
+        "z": "2356a64c.d40d2a",
+        "name": "Disable Continuous Read",
+        "topic": "Calibration",
+        "payload": "C,?<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "fa6172b8.636ec"
+            ]
+        ]
+    },
+    {
+        "id": "d70c87fc.609668",
+        "type": "inject",
+        "z": "2356a64c.d40d2a",
+        "name": "Information",
+        "topic": "",
+        "payload": "i,<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "fa6172b8.636ec"
+            ]
+        ]
+    },
+    {
+        "id": "519b0e0a.38889",
+        "type": "comment",
+        "z": "2356a64c.d40d2a",
+        "name": "Ec Sensor",
+        "info": "",
+        "x": 660,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "ed44ad8.2cb495",
+        "type": "ui_chart",
+        "z": "2356a64c.d40d2a",
+        "name": "",
+        "group": "5b95d621.91e058",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Total Dissolved Solids",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 1180,
+        "y": 240,
+        "wires": [
+            [
+                "5dc4d67b.9a0218"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "4a4f7a97.201394",
+        "type": "inject",
+        "z": "2356a64c.d40d2a",
+        "name": "Status",
+        "topic": "",
+        "payload": "Status,<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 90,
+        "y": 320,
+        "wires": [
+            [
+                "fa6172b8.636ec"
+            ]
+        ]
+    },
+    {
+        "id": "8e770831.0bc378",
+        "type": "inject",
+        "z": "2356a64c.d40d2a",
+        "name": "Response codes",
+        "topic": "",
+        "payload": "*OK,0<cr>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 360,
+        "wires": [
+            [
+                "fa6172b8.636ec"
+            ]
+        ]
+    },
+    {
+        "id": "69bc9540.6d502c",
+        "type": "switch",
+        "z": "2356a64c.d40d2a",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "*OK",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 650,
+        "y": 180,
+        "wires": [
+            [
+                "68fbfdd1.5ff4c4"
+            ],
+            [
+                "5a738a34.df59b4"
+            ]
+        ]
+    },
+    {
+        "id": "376de73e.15e328",
+        "type": "inject",
+        "z": "2356a64c.d40d2a",
+        "name": "Check output",
+        "topic": "",
+        "payload": "O,?<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 400,
+        "wires": [
+            [
+                "fa6172b8.636ec"
+            ]
+        ]
+    },
+    {
+        "id": "d34b1bd5.ec71c8",
+        "type": "debug",
+        "z": "2356a64c.d40d2a",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 630,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a7d0c059.be739",
+        "type": "inject",
+        "z": "2356a64c.d40d2a",
+        "name": "enable / disable conductivity output",
+        "topic": "",
+        "payload": "O,EC,1<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 180,
+        "y": 440,
+        "wires": [
+            [
+                "fa6172b8.636ec"
+            ]
+        ]
+    },
+    {
+        "id": "8c24756e.f690e8",
+        "type": "inject",
+        "z": "2356a64c.d40d2a",
+        "name": "enable / disable dissolved solids output",
+        "topic": "",
+        "payload": "O,TDS,1<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "fa6172b8.636ec"
+            ]
+        ]
+    },
+    {
+        "id": "d1b56bde.913fb8",
+        "type": "inject",
+        "z": "2356a64c.d40d2a",
+        "name": "enable / disable salinity output",
+        "topic": "",
+        "payload": "O,S,1<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b43538e1.66c7d8",
+        "type": "inject",
+        "z": "2356a64c.d40d2a",
+        "name": "enable / disable specific gravity output",
+        "topic": "",
+        "payload": "O,SG,0<CR>",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 190,
+        "y": 560,
+        "wires": [
+            [
+                "fa6172b8.636ec"
+            ]
+        ]
+    },
+    {
+        "id": "43f8dd37.0377c4",
+        "type": "ui_chart",
+        "z": "2356a64c.d40d2a",
+        "name": "",
+        "group": "5b95d621.91e058",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Salinity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 1140,
+        "y": 280,
+        "wires": [
+            [
+                "5dc4d67b.9a0218"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3c99ad94.f00092",
+        "type": "ui_chart",
+        "z": "2356a64c.d40d2a",
+        "name": "",
+        "group": "5b95d621.91e058",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Electrical Conductivity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 1180,
+        "y": 200,
+        "wires": [
+            [
+                "5dc4d67b.9a0218"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5a738a34.df59b4",
+        "type": "csv",
+        "z": "2356a64c.d40d2a",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "EC,TDS,S",
+        "skip": "0",
+        "x": 790,
+        "y": 200,
+        "wires": [
+            [
+                "50fe80e3.56195",
+                "c5b0259d.b0d7e8",
+                "3ca2e349.49793c"
+            ]
+        ]
+    },
+    {
+        "id": "5dc4d67b.9a0218",
+        "type": "debug",
+        "z": "2356a64c.d40d2a",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 1310,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "50fe80e3.56195",
+        "type": "change",
+        "z": "2356a64c.d40d2a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.EC",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 200,
+        "wires": [
+            [
+                "3c99ad94.f00092"
+            ]
+        ]
+    },
+    {
+        "id": "c5b0259d.b0d7e8",
+        "type": "change",
+        "z": "2356a64c.d40d2a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.TDS",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 240,
+        "wires": [
+            [
+                "ed44ad8.2cb495"
+            ]
+        ]
+    },
+    {
+        "id": "3ca2e349.49793c",
+        "type": "change",
+        "z": "2356a64c.d40d2a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.S",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 280,
+        "wires": [
+            [
+                "43f8dd37.0377c4"
+            ]
+        ]
+    },
+    {
+        "id": "707a8c3d.7d1054",
+        "type": "comment",
+        "z": "178ea6e2.92c459",
+        "name": "EZO Stamp Commands",
+        "info": "All commands are ascii strings or ascii characters",
+        "x": 180,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c1d51844.dc5b08",
+        "type": "comment",
+        "z": "2356a64c.d40d2a",
+        "name": "EZO Stamp Commands",
+        "info": "All commands are ascii strings or ascii characters",
+        "x": 120,
+        "y": 60,
+        "wires": []
+    }
+]
