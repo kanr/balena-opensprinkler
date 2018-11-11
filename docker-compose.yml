@@ -19,8 +19,17 @@ services:
     expose:
       - "8080"
       - "80"
+  nodered:
+    build: ./balena-node-red
+    volumes:
+      - "nodered:/var/lib/node-red"
+    expose:
+      - "80"
+    ports:
+      - 80:80   
 
 
 volumes:
   opensprinkler:
+  nodered:
   

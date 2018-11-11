@@ -1,0 +1,3 @@
+[submodule "balena-node-red"]
+	path = balena-node-red
+	url = git@github.com:kanr/balena-node-red.git
