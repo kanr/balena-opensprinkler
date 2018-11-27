@@ -1,4 +1,4 @@
-# Balena OpenSprinkler Node-Red 
+# Balena OpenSprinkler Node-Red
 
 ![logo](assets/balena-opensprinkler-node-red.png)
 
