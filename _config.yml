@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
-logo: [assets/balena-opensprinkler-node-red.png]
+logo: assets/balena-opensprinkler-node-red.png
 title: Balena OpenSprinkler Node-Red
 description: Multi-Container build for the opensprinkler firmware and Node-Red
-show_downloads: "true"
+show_downloads: true
 #google_analytics: 
