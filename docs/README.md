@@ -4,7 +4,7 @@
 
 The OpenSprinkler is an open source hardware ecosystem for micro-controllers (arduino esp8266) and single board computers (Raspberry Pi (pictured bellow), BeagleBoneBlack)
 
-![OSPI](/docs/assets/opensprinklerpi.jpeg)
+![OSPI](assets/opensprinklerpi.jpeg)
 
 This repository builds a docker container for the [Balena.io](balena.io) ecosystem which includes all the boards in the BeagleBone and Raspberry Pi product families.
 
