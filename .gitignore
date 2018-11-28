@@ -157,3 +157,7 @@ bower_components
 *.img
 *.zip
 build_logs
+_site
+.github
+.sass-cache/
+Gemfile.lock
