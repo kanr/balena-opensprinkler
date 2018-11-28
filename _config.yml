@@ -1,6 +1,6 @@
-title: Minimal theme
-logo: /assets/img/logo.png
-description: Minimal is a theme for GitHub Pages.
+title: Balena-OpenSprinkler-NodeRed
+logo: docs/assets/img/balena-opensprinkler-node-red.png
+description: Balena-OpenSprinkler-NodeRed
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal

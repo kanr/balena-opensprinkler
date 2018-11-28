@@ -2,122 +2,28 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# Balena OpenSprinkler Node-Red
 
-[Link to another page](./another-page.html).
+The OpenSprinkler is an open source hardware ecosystem for micro-controllers (arduino esp8266) and single board computers (Raspberry Pi (pictured bellow), BeagleBoneBlack)
 
-There should be whitespace between paragraphs.
+![OSPI](/docs/assets/img/opensprinklerpi.jpeg)
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+This repository builds a docker container for the [Balena.io](balena.io) ecosystem which includes all the boards in the BeagleBone and Raspberry Pi product families.
 
-# Header 1
+`opensprinkler/Dockerfile` makes use for the [multi-stage builds.](https://docs.docker.com/develop/develop-images/multistage-build/) More information on the use of multi-stage builds with containers can be read [here.](https://www.balena.io/blog/multi-stage-docker-builds-for-tiny-iot-images/)
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+## Sources
 
-## Header 2
+https://github.com/defektive/hydro-pi-frontend
+https://github.com/devanl/pyOpenSprinklerRest
+https://github.com/JohnStrunk/OpenSprinkler-RPi-docker
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+## OpenSprinkler Support
 
-### Header 3
+![OpenSprinkler](/docs/assets/img/opensprinkler-dark.jpeg)
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+[FreshDesk](https://openthings.freshdesk.com/support/solutions/articles/5000713771-user-manual-assemble-the-laser-cut-enclosure-for-ospi)
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+[GitHub](https://github.com/OpenSprinkler)
 
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+[Unified firmware on Raspberry Pi](https://openthings.freshdesk.com/support/solutions/articles/5000631599-installing-and-updating-the-unified-firmware)
