@@ -12,6 +12,8 @@ Password is required for all commands (the pw parameter). Your device password i
 
 > when using the API commands the password should be MD5 hashed.
 
+On mac or linux md5 should be install `md5 -s skdjdamw` returns `MD5 ("skdjdamw") = 41fe1377c50715477aae18c2e92da114` for example. 
+
 In the following, OpenSprinkler’s IP address is referred to as os-ip.
 
 For most commands, parameters are optional and the order of parameters does not matter. Parameters that do not appear

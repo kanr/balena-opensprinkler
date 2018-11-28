@@ -1,6 +1,6 @@
 # Balena OpenSprinkler Node-Red
 
-![logo](docs/assets/balena-opensprinkler-node-red.png)
+![logo](assets/balena-opensprinkler-node-red.png)
 
 The OpenSprinkler is an open source hardware ecosystem for micro-controllers (arduino esp8266) and single board computers (Raspberry Pi (pictured bellow), BeagleBoneBlack)
 
