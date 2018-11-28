@@ -2,5 +2,5 @@ title: Balena-OpenSprinkler-NodeRed
 logo: docs/assets/img/balena-opensprinkler-node-red.png
 description: Balena-OpenSprinkler-NodeRed
 show_downloads: true
-google_analytics:
+google_analytics: UA-110956939-1
 theme: jekyll-theme-minimal
