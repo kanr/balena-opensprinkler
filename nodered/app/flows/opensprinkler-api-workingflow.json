@@ -1,0 +1,570 @@
+[
+    {
+        "id": "c6fdcb29.54eed8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4a7ed70d.579a48",
+        "type": "inject",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "e62f6072.0e013"
+            ]
+        ]
+    },
+    {
+        "id": "e62f6072.0e013",
+        "type": "http request",
+        "z": "c6fdcb29.54eed8",
+        "name": "Get Controller Variables",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://192.168.0.158:8080/jc?pw=a6d82bced638de3def1e9bbb4983225c",
+        "tls": "",
+        "x": 350,
+        "y": 80,
+        "wires": [
+            [
+                "db94e088.fff93"
+            ]
+        ]
+    },
+    {
+        "id": "db94e088.fff93",
+        "type": "debug",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4c33077.5c783f8",
+        "type": "inject",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "676e944.4c4076c"
+            ]
+        ]
+    },
+    {
+        "id": "676e944.4c4076c",
+        "type": "http request",
+        "z": "c6fdcb29.54eed8",
+        "name": "Change Controller Variables",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://192.168.0.158:8080/cv?pw=a6d82bced638de3def1e9bbb4983225c&rsn=x&rbt=x&en=x&rd=x",
+        "tls": "",
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "6708df8.2c66f2"
+            ]
+        ]
+    },
+    {
+        "id": "6708df8.2c66f2",
+        "type": "debug",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4e937cc8.3489d4",
+        "type": "inject",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "f031f41b.326df8"
+            ]
+        ]
+    },
+    {
+        "id": "f031f41b.326df8",
+        "type": "http request",
+        "z": "c6fdcb29.54eed8",
+        "name": "Get Options",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://192.168.0.158:8080/jo?pw=a6d82bced638de3def1e9bbb4983225c",
+        "tls": "",
+        "x": 290,
+        "y": 240,
+        "wires": [
+            [
+                "d5111c5d.b41eb"
+            ]
+        ]
+    },
+    {
+        "id": "d5111c5d.b41eb",
+        "type": "debug",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "53aeef7b.c4907",
+        "type": "inject",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 320,
+        "wires": [
+            [
+                "93a118b9.d32d08"
+            ]
+        ]
+    },
+    {
+        "id": "93a118b9.d32d08",
+        "type": "http request",
+        "z": "c6fdcb29.54eed8",
+        "name": "Change Options",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://192.168.0.158:8080/co?pw=a6d82bced638de3def1e9bbb4983225c&o?=x&loc=x&wtkey=x&ttt=x",
+        "tls": "",
+        "x": 300,
+        "y": 320,
+        "wires": [
+            [
+                "c1b8cd43.10df7"
+            ]
+        ]
+    },
+    {
+        "id": "c1b8cd43.10df7",
+        "type": "debug",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "ab7fe95f.990508",
+        "type": "inject",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 400,
+        "wires": [
+            [
+                "760000cc.b05ea"
+            ]
+        ]
+    },
+    {
+        "id": "760000cc.b05ea",
+        "type": "http request",
+        "z": "c6fdcb29.54eed8",
+        "name": "Change Password",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://192.168.0.158:8080/sp?pw=a6d82bced638de3def1e9bbb4983225c&npw=xxx&cpw=a6d82bced638de3def1e9bbb4983225c",
+        "tls": "",
+        "x": 310,
+        "y": 400,
+        "wires": [
+            [
+                "3ce296fa.b589aa"
+            ]
+        ]
+    },
+    {
+        "id": "3ce296fa.b589aa",
+        "type": "debug",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d3b368db.90d6e8",
+        "type": "inject",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 480,
+        "wires": [
+            [
+                "d70c61d0.473b7"
+            ]
+        ]
+    },
+    {
+        "id": "d70c61d0.473b7",
+        "type": "http request",
+        "z": "c6fdcb29.54eed8",
+        "name": "Get station name and attributes",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://192.168.0.158:8080/jn?pw=a6d82bced638de3def1e9bbb4983225c",
+        "tls": "",
+        "x": 350,
+        "y": 480,
+        "wires": [
+            [
+                "a492216.2993de"
+            ]
+        ]
+    },
+    {
+        "id": "a492216.2993de",
+        "type": "debug",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "91685322.35031",
+        "type": "inject",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 560,
+        "wires": [
+            [
+                "32acb21e.c6a20e"
+            ]
+        ]
+    },
+    {
+        "id": "32acb21e.c6a20e",
+        "type": "http request",
+        "z": "c6fdcb29.54eed8",
+        "name": "Change station name and attributes",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://192.168.0.158:8080/jn?pw=a6d82bced638de3def1e9bbb4983225c&s?=x&m?=x&i?=x&a?=&d?=x&q?=x",
+        "tls": "",
+        "x": 370,
+        "y": 560,
+        "wires": [
+            [
+                "56db0355.724e6c"
+            ]
+        ]
+    },
+    {
+        "id": "56db0355.724e6c",
+        "type": "debug",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 630,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "f7445370.a37da",
+        "type": "inject",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 640,
+        "wires": [
+            [
+                "4599785f.ad41d8"
+            ]
+        ]
+    },
+    {
+        "id": "4599785f.ad41d8",
+        "type": "http request",
+        "z": "c6fdcb29.54eed8",
+        "name": "Get Station Status",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://192.168.0.158:8080/js?pw=a6d82bced638de3def1e9bbb4983225c",
+        "tls": "",
+        "x": 310,
+        "y": 640,
+        "wires": [
+            [
+                "7b62546b.54400c"
+            ]
+        ]
+    },
+    {
+        "id": "7b62546b.54400c",
+        "type": "debug",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "68670340.70bf9c",
+        "type": "inject",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 720,
+        "wires": [
+            [
+                "4bf8cea8.1c314"
+            ]
+        ]
+    },
+    {
+        "id": "4bf8cea8.1c314",
+        "type": "http request",
+        "z": "c6fdcb29.54eed8",
+        "name": "Test Station",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://192.168.0.158:8080/cm?pw=a6d82bced638de3def1e9bbb4983225c&sid=x&en=x&t=x",
+        "tls": "",
+        "x": 290,
+        "y": 720,
+        "wires": [
+            [
+                "6bf3151a.a699cc"
+            ]
+        ]
+    },
+    {
+        "id": "6bf3151a.a699cc",
+        "type": "debug",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "38439235.40212e",
+        "type": "inject",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 820,
+        "wires": [
+            [
+                "b0bac39c.094d4"
+            ]
+        ]
+    },
+    {
+        "id": "b0bac39c.094d4",
+        "type": "http request",
+        "z": "c6fdcb29.54eed8",
+        "name": "Get program data",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://192.168.0.158:8080/jp?pw=a6d82bced638de3def1e9bbb4983225c",
+        "tls": "",
+        "x": 310,
+        "y": 820,
+        "wires": [
+            [
+                "df1f3e6d.0b649"
+            ]
+        ]
+    },
+    {
+        "id": "df1f3e6d.0b649",
+        "type": "debug",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "ec30ec0.4069f18",
+        "type": "inject",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 920,
+        "wires": [
+            [
+                "ebcd7012.036a2"
+            ]
+        ]
+    },
+    {
+        "id": "ebcd7012.036a2",
+        "type": "http request",
+        "z": "c6fdcb29.54eed8",
+        "name": "Run Once Program",
+        "method": "GET",
+        "ret": "obj",
+        "url": "http://192.168.0.158:8080/cr?pw=a6d82bced638de3def1e9bbb4983225c&t=[60,60,60,0,0,0,0,0]",
+        "tls": "",
+        "x": 310,
+        "y": 920,
+        "wires": [
+            [
+                "f9dc0a41.6f7d18"
+            ]
+        ]
+    },
+    {
+        "id": "f9dc0a41.6f7d18",
+        "type": "debug",
+        "z": "c6fdcb29.54eed8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 920,
+        "wires": []
+    }
+]
