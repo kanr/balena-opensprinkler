@@ -18,7 +18,8 @@ RUN JOBS=MAX npm install -g --production --silent \
     #node-red-node-msgpack \
     #node-red-node-random \
     node-red-node-serialport \
-    node-red-node-suncalc
+    node-red-node-suncalc \
+    && npm link node-red-contrib-opensprinkler
 
 COPY ./app ./
 VOLUME /var/lib/node-red
