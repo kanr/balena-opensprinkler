@@ -1,0 +1,43 @@
+
+<!-- Main node definition that is registered with the editor-->
+<script type="text/javascript">
+    RED.nodes.registerType('getOptions',{
+        category: 'opensprinkler',
+        color: '#F3F3F3',
+        defaults: {
+            name: {value:"Get Controller Options"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "getControllerVariables/icons/os-icon-png.png",
+        label: function() {
+            return this.name||"get-options";
+        }
+    });
+</script>
+
+<!-- edit template-->
+<script type="text/x-red" data-template-name="getOptions">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<!-- Help text-->
+<script type="text/x-red" data-help-name="getOptions">
+    <p>Return Variables:|Description
+|---|---|
+|devt:|Device time (epoch time). This is always the local time.
+|nbrd:|Number of 8-station boards (including main controller).
+|en:|Operation enable bit.
+|rd:|Rain delay bit (1: rain delay is currently in effect; 0: no rain delay).
+|rs:|Rain sensor status bit (1: rain is detected from rain sensor; 0: no rain detected).
+|loc: |Location string.
+|wtkey:| Wunderground API key.
+|sunrise:| Today’s sunrise time (minutes from midnight).
+|sunset:| Today’s sunset time (minutes from midnight).
+|sbits:|Station status bits. Each byte in this array corresponds to an 8-station board and represents the bit field (LSB). For example, 1 means the 1st station on the board is open, 192 means the 7th and 8th stations are open.
+|ps:|Program status data: each element is a 3-field array that stores the [pid,rem,start] of a station, where pid is the program index (0 means non), rem is the remaining water time (in seconds), start is the start time. If a station is not running (sbit is 0) but has a non-zero pid, that means the station is in the queue waiting to run.
+|lrun:|Last run record, which stores the [station index, program index, duration, end time] of the last run station.</p>
+</script>

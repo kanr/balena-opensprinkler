@@ -13,7 +13,8 @@
   ],
   "node-red": {
     "nodes": {
-      "getControllerVariable": "getControllerVariables/getControllerVariables.js"
+      "getControllerVariable": "getControllerVariables/getControllerVariables.js",
+      "getOptions": "getOptions.js"
     }
   }
 }
