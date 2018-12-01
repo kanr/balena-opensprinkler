@@ -22,5 +22,5 @@ module.exports = function(RED) {
 
         });
     }
-    RED.nodes.registerType("OpenSprinkler",getControllerVariables);
+    RED.nodes.registerType("getVariables",getControllerVariables);
 };

@@ -1,7 +1,7 @@
 
 <!-- Main node definition that is registered with the editor-->
 <script type="text/javascript">
-    RED.nodes.registerType('OpenSprinkler',{
+    RED.nodes.registerType('getVariables',{
         category: 'opensprinkler',
         color: '#F3F3F3',
         defaults: {
@@ -17,7 +17,7 @@
 </script>
 
 <!-- edit template-->
-<script type="text/x-red" data-template-name="blink">
+<script type="text/x-red" data-template-name="getVariables">
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
@@ -25,7 +25,7 @@
 </script>
 
 <!-- Help text-->
-<script type="text/x-red" data-help-name="blink">
+<script type="text/x-red" data-help-name="getVariables">
     <p>Return Variables:|Description
 |---|---|
 |devt:|Device time (epoch time). This is always the local time.
