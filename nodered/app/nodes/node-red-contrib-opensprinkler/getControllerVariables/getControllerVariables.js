@@ -5,7 +5,7 @@ module.exports = function(RED) {
         RED.nodes.createNode(this,config);
         var node = this;
         this.on('input', function(msg) {
-           requestAnimationFrame.post({
+           request.post({
                url: process.env.OPENSPRINKLER_ADDRESS + '/jc?pw=' + process.env.OPENSPRINKLER_PASSWORD
            }, function(error, response, body){
                if (error) {
