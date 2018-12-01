@@ -10,5 +10,10 @@ cp /usr/src/app/flows/* /data/node-red/user/lib/flows/
 mkdir -p /data/node-red/nodes/ || true
 cp /usr/src/app/nodes/* /data/node-red/nodes/
 
+cd /usr/src/app/nodes/node-red-contrib-opensprinkler
+npm link
+cd /usr/src/app
+npm link node-red-contrib-opensprinkler
+
 # Start app
 node-red --settings /usr/src/app/settings.js
