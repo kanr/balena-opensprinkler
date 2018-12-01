@@ -8,7 +8,7 @@ cp /usr/src/app/flows/* /data/node-red/user/lib/flows/
 
 # Make the opensprinkler node available
 mkdir -p /data/node-red/nodes/ || true
-cp /usr/src/app/nodes/* /data/node-red/nodes/
+cp -r /usr/src/app/nodes/* /data/node-red/nodes/
 
 cd /usr/src/app/nodes/node-red-contrib-opensprinkler
 npm link
