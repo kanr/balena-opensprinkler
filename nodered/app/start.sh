@@ -7,7 +7,7 @@ mkdir -p /data/node-red/user/lib/flows || true
 cp /usr/src/app/flows/* /data/node-red/user/lib/flows/
 
 # Make the opensprinkler node available
-mkdir /data/node-red/nodes/ || true
+mkdir -p /data/node-red/nodes/ || true
 cp /usr/src/app/nodes/* /data/node-red/nodes/
 
 # Start app
