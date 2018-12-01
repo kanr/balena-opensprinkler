@@ -2,12 +2,15 @@
   "name": "node-red-contrib-opensprinkler",
   "version": "0.0.1",
   "description": "Nodes to bring the opensprinkler API into node-red",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": "https://github.com/portbyte/node-red-contrib-opensprinkler",
+  "dependencies": {
+    "request":"^2.88.0"
   },
   "author": "Connor Aitken @kanr",
-  "license": "Apache-2",
+  "license": "Apache-2.0",
+  "keywords": [
+    "node-red", "balena", "opensprinkler","resin"
+  ],
   "node-red": {
     "nodes": {
       "getControllerVariable": "getControllerVariables/getControllerVariables.js"
